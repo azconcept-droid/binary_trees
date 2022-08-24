@@ -16,7 +16,7 @@ size_t get_longest_child(const binary_tree_t *tree)
 	left_child =  1 + get_longest_child(tree->left);
 	right_child =  1 + get_longest_child(tree->right);
 
-	return (left_child > right_child ? left_child : right_child);
+	return (left_child < right_child ? right_child : left_child);
 }
 
 /**
